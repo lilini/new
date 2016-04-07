@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>机构切换</title>
+    <link href="org_change.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="top"></div>
+    <div class="bottom">
+        <div class="left">
+            <span >组织列表：</span>
+            <ul id="main_box">
+                <li class="current">北京盛科维科技发展有限公司<span id="current_sign">当前</span></li>
+                <li>国泰信安</li>
+                <li>选项二</li>
+                <li>选项三</li>
+                <li>选项四</li>
+                <li>选项五</li>
+            </ul>
+            <div class="button_div">
+                <input class="buttonDefault" type="button" name="org_create" value="新建"/>
+                <input class="buttonDefault Disabled" disabled="disabled" type="button" name="org_change" value="切换" />
+                <input class="buttonDefault Disabled" disabled="disabled" type="button" name="org_delete" value="删除"/>
+            </div>
+        </div>
+        <div class="right">
+            <img id="bar_code" href=""/>
+            <p>可分享给好友加入组织</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js "></script>
+    <script type="text/javascript" src="org_change.js"></script>
+    <!--遮罩-->
+    <div id="cover" style="display: none"></div>
+    <!-- 新建组织弹出框-->
+    <div id="create_org" style="display: none">
+        <h4>创建组织</h4>
+        <img class="close" src="../images/webImages/09close.png">
+        <hr>
+        <span>组织名称</span>
+        <input type="text" class="new_org"/>
+        <form class="btn" name="create_org_form" method="post">
+            <input class="buttonDefault" type="submit" value="确定" name="ok"/>
+            <input class="buttonDefault" type="button" value="取消" name="cancel"/>
+        </form>
+    </div>
+    <!-- 切换成功框-->
+    <div id="change_after" style="display: none">切换成功!</div>
+</body>
+</html>
